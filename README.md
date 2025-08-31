@@ -144,6 +144,25 @@ Fill obtained data into **A3 Template (Schedule FA)**.
 
 This `A3.csv` is uploaded to declare FA in ITR2.  
 
+
+Compute manually for **A2 Template (Schedule FA)**.  
+
+- One entry per account
+
+| Field | Value |
+|-------|-------|
+| Country Name & Code | 2 |
+| Name of financial institution | E*TRADE FROM MORGAN  STANLEY |
+| Address of financial institution  | P.O. BOX 484  JERSEY CITY NJ |
+| ZIP Code | 07303 |
+| Account Number | * |
+| Status | I filled Owner |
+| Account opening date | Date of Welcome to Etrade mail |
+| Peak Balance During the Period | From final statement of the year, I found the peak date after that and multiplied value and TT Rate |
+| Closing Balance | Same Final value with stock value and tt rate at 31st Dec 2024 |
+| Nature of Amount  | I selected Proceeds from sale or redemption of financial assets for STCG And Dividend |
+| Amount  | Dividend |
+
 ---
 
 ## 📝 Fill Form 67 – Foreign Tax Credit (FTC)  
@@ -204,6 +223,8 @@ Open ITR2 → Select default options → Check all schedules (before adding info
 - Open **Section A3**  
 - Download Template A3  
 - Fill with all foreign stocks till 30th Dec 2024 (from FA calculation above)  
+- Open **Section A2**
+-  Fill the values as described above. 
 
 ---
 
@@ -219,4 +240,3 @@ Open ITR2 → Select default options → Check all schedules (before adding info
 - Use last sheet for cross-checking.  
 
 ---
-
