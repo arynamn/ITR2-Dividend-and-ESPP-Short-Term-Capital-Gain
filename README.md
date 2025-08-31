@@ -65,11 +65,16 @@ Prepare **Dividend and Capital Summary Excel Sheet**.
 3. Fill these values in Excel:  
    - `M8:11` → Dividend earned (USD)  
    - `N8:11` → Dividend Tax deducted in US at 25%  
-4. Auto-calculated values:  
+4. Calculate average tax rate.
+   - Calculate Total Income and fill at T2.  Total Income assuming no relief to dividend.
+   - Calculate Total Tax and fill at T3. Use Income Tax Calculator, or utilize the ITR by skipping Tax Relief.
+   - Average Rate = Total Tax / Total Income.
+5. Auto-calculated values:  
    - `S8` → Total Dividend INR  
    - `S10` → 25% Tax INR  
    - `V11` → 31.2% Tax INR  
-   - `W11` → Tax Payable  
+   - `W11` → Delta tax
+   - `T5` → Tax payable on such income under normal provisions in India (d) = Dividend * Average Tax (21.2% for me).
 
 ### Optional (For Personal Validation)  
 If you want to validate values against all individual stock entries:  
@@ -112,7 +117,7 @@ If any RSU/ESPP sold:
 - `SUM(F8:F*)` → Cost of Acquisition  
 - `0` → Tax outside India  
 - `SUM(N8:N*)` → Gains from outside India  
-- `SUM(P8:P*)` → Tax Payable @ 31.24%  
+- `SUM(P8:P*)` → Tax Payable @ 30%  
 
 ---
 
@@ -175,18 +180,17 @@ Compute manually for **A2 Template (Schedule FA)**.
    - Income from outside India: → Dividend Calculation → Total Dividend  
    - Tax paid outside India: → Dividend Calculation → Tax @ 25%  
    - Rate: 25%  
-   - Tax payable in India: → Dividend Calculation → Tax @ 31.24%  
+   - Tax payable in India: → Dividend Calculation → Tax @ AverageTaxRate% 
    - Article No. of DTAA: 10  
    - Rate of Tax as per DTAA: 25%  
-   - Amount: Dividend Calculation → Tax @ 25%  
-   - Total foreign tax credit claimed: Dividend Calculation → Tax @ 25%  
+   - Amount: Dividend Calculation → Minimum of both taxes.
+   - Total foreign tax credit claimed: Dividend Calculation → Minimum of both taxes. 
    - Tax payable under Section 115JB/JC: 0  
    - Credit claimed under Section 91: 0  
 3. **Part B**: Fill and update as required  
 4. Verify & Attachments:  
    - 1042-S  
-   - Credit statements from each quarter for dividend  
-   - Small text file with dividend received in all 4 quarters  
+   - Credit statements from each quarter for dividend
 
 📌 **Practical Tip (from ChatGPT):**  
 Attach **1099-DIV (or 1042-S)** + **Dividend Transaction Report (CSV/PDF)**.  
@@ -212,7 +216,9 @@ Open ITR2 → Select default options → Check all schedules (before adding info
 - Country Code: 2 (USA)  
 - TIN: PAN Number  
 - Capital Gains → From CG calculation (DTAA Article 13)  
+   - Tax payable on such income under normal provisions in India is strictly 30% for Foreign Stocks
 - Other Sources → Dividend (DTAA Article 10)  
+   - Tax payable on such income under normal provisions in India is Average Tax Rate.
 
 ### Step 5 – Schedule TR (Tax Relief)  
 - Select **90** under Relief Claimed Section  
