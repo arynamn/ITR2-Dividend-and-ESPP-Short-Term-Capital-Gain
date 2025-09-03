@@ -75,6 +75,8 @@ Prepare **Dividend and Capital Summary Excel Sheet**.
    - `V11` → 31.2% Tax INR  
    - `W11` → Delta tax
    - `T5` → Tax payable on such income under normal provisions in India (d) = Dividend * Average Tax (21.2% for me).
+   - ** Tax paid in India is different for different sites. Some use 31.2% exact. Some use Tax with Dividend - Tax without Dividend. Most of the sites consider effective tax rate.
+   - ** Make your own choice.
 
 ### Optional (For Personal Validation)  
 If you want to validate values against all individual stock entries:  
@@ -230,7 +232,8 @@ Open ITR2 → Select default options → Check all schedules (before adding info
 - Download Template A3  
 - Fill with all foreign stocks till 30th Dec 2024 (from FA calculation above)  
 - Open **Section A2**
--  Fill the values as described above. 
+- Fill the values as described above.
+- ** Dont know if we should fill A2 or A3 or both. Make your own choice. 
 
 ---
 
@@ -246,3 +249,4 @@ Open ITR2 → Select default options → Check all schedules (before adding info
 - Use last sheet for cross-checking.  
 
 ---
+
